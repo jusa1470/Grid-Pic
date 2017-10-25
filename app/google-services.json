@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "489216708867",
+    "firebase_url": "https://gridpic-19d92.firebaseio.com",
+    "project_id": "gridpic-19d92",
+    "storage_bucket": "gridpic-19d92.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:489216708867:android:3fc04b3c5ce35fc1",
+        "android_client_info": {
+          "package_name": "com.example.software1025.gridpic"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "489216708867-3ucuctlog561q3fufulkd644av38mr36.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.software1025.gridpic",
+            "certificate_hash": "9287148791555a1d4f5a9be893b3b8bfc94a6ac0"
+          }
+        },
+        {
+          "client_id": "489216708867-gfcvnbf6u8jongvsaiooqucm6obr5ng1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB2b-7Q597PXrNgOx0KEwxNAZYBAJTF3M0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "489216708867-gfcvnbf6u8jongvsaiooqucm6obr5ng1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
