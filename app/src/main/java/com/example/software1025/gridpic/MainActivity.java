@@ -113,7 +113,9 @@ public class MainActivity extends AppCompatActivity {
                 // ...
             }
         };
-
+        //
+        //mAuth.addAuthStateListener(mAuthListener);
+        //
 
 
     }
@@ -364,7 +366,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onStart() {
         super.onStart();
-        mAuth.addAuthStateListener(mAuthListener);
+        //mAuth.addAuthStateListener(mAuthListener);
     }
 
     @Override
