@@ -2,6 +2,7 @@ package com.example.software1025.gridpic;
 
 import android.Manifest;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.ImageFormat;
 import android.graphics.SurfaceTexture;
@@ -30,6 +31,8 @@ import android.view.Surface;
 import android.view.TextureView;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -71,6 +74,12 @@ public class MainActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
+
+    private TextView mStatusTextView;
+    private TextView mDetailTextView;
+    private EditText mEmailField;
+    private EditText mPasswordField;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -113,6 +122,7 @@ public class MainActivity extends AppCompatActivity {
                 // ...
             }
         };
+        mAuth = FirebaseAuth.getInstance();
         //
         //mAuth.addAuthStateListener(mAuthListener);
         //
@@ -139,14 +149,14 @@ public class MainActivity extends AppCompatActivity {
     };
     private final CameraDevice.StateCallback stateCallback = new CameraDevice.StateCallback() {
         @Override
-        public void onOpened(CameraDevice camera) {
+        public void onOpened(@NonNull CameraDevice camera) {
             //This is called when the camera is open
             Log.e(TAG, "onOpened");
             cameraDevice = camera;
             createCameraPreview();
         }
         @Override
-        public void onDisconnected(CameraDevice camera) {
+        public void onDisconnected(@NonNull CameraDevice camera) {
             cameraDevice.close();
         }
         @Override
@@ -366,6 +376,10 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onStart() {
         super.onStart();
+
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+
+        updateUI(currentUser);
         //mAuth.addAuthStateListener(mAuthListener);
     }
 
@@ -374,6 +388,16 @@ public class MainActivity extends AppCompatActivity {
         super.onStop();
         if (mAuthListener != null) {
             mAuth.removeAuthStateListener(mAuthListener);
+        }
+    }
+
+    private void updateUI(FirebaseUser user){
+        //Log.d("CREATION", user.toString());
+        if (user != null) {
+            Log.d("CREATION", "User is already signed in!");
+        } else {
+            Log.d("CREATION", "User is not signed in!");
+            startActivity(new Intent(MainActivity.this, LoginActivity.class));
         }
     }
 }
