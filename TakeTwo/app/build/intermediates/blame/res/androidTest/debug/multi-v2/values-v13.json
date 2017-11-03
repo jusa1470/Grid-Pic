@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/juliasanford/StudioProjects/Test/app/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-v13/values-v13.xml",
+            "outputFile": "/Users/Ryan_Loi/Documents/temporary/Grid-Pic/TakeTwo/app/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-v13/values-v13.xml",
             "map": [
                 {
-                    "source": "/Users/juliasanford/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/8f3e222d1033b510b25a79db9b6cdffc/res/values-v13/values-v13.xml",
+                    "source": "/Users/Ryan_Loi/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/f8d65c73e3588c6e758462e1de4f4243/res/values-v13/values-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
