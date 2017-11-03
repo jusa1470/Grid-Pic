@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="textViewSignup" type="id" />
+    <item name="buttonSignin" type="id" />
+    <item name="textViewUserEmail" type="id" />
+    <item name="buttonLogout" type="id" />
+</resources>
